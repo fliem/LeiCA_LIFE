@@ -1,0 +1,8 @@
+http://team.inria.fr/parietal/files/2015/07/MSDL_ABIDE.zip
+
+Tentative title for the paper (submitted to neuroimage): 
+
+Inter-site autism biomarkers from resting-state fMRI
+Alexandre Abraham, Michael Milham, Adriana Di Martino, Cameron Craddock,
+Dimitris Samaras, Bertrand Thirion, Gael Varoquaux
+

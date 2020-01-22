@@ -1,0 +1,17 @@
+fast -g -p MNI152_T1_1mm_brain.nii.gz
+
+cp MNI152_T1_1mm_brain_seg_1.nii.gz MNI152_T1_1mm_GM.nii.gz
+cp MNI152_T1_1mm_brain_seg_2.nii.gz MNI152_T1_1mm_WM.nii.gz
+fslmaths MNI152_T1_1mm_GM.nii.gz -add MNI152_T1_1mm_WM.nii.gz MNI152_T1_1mm_GM_WM.nii.gz
+
+for i in "MNI152_T1_1mm_GM.nii.gz" "MNI152_T1_1mm_WM.nii.gz" "MNI152_T1_1mm_GM_WM.nii.gz" "MNI152_T1_1mm_brain_mask.nii.gz"; do
+	for res in 2 3 4 8; do
+		out_file_str=${i/1mm/${res}mm}
+		cmd="flirt -in $i -ref $i -applyisoxfm $res -out $out_file_str" -interp nearestneighbour
+		echo $cmd
+		$cmd
+	done
+done
+
+
+

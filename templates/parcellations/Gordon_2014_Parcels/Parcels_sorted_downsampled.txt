@@ -1,0 +1,14 @@
+ds_rs_number,rs_name
+0,Auditory
+1,CinguloOperc
+2,CinguloParietal
+3,Default
+4,DorsalAttn
+5,FrontoParietal
+6,None
+7,RetrosplenialTemporal
+8,SMhand
+9,SMmouth
+10,Salience
+11,VentralAttn
+12,Visual
